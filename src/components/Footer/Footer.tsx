@@ -58,9 +58,9 @@ const Footer = () => {
             <hr />
             <div className={styles.container_icons}>
                 <div>
-                    <img src="src/assets/icons/facebook.svg" className={styles.icon} />
-                    <img src="src/assets/icons/twitter.svg" className={styles.icon} />
-                    <img src="src/assets/icons/youtube.svg" className={styles.icon} />
+                    <img src="/assets/icons/facebook.svg" className={styles.icon} />
+                    <img src="/assets/icons/twitter.svg" className={styles.icon} />
+                    <img src="/assets/icons/youtube.svg" className={styles.icon} />
                 </div>
                 <p>Derechos reservados © Lucas López</p>
             </div>

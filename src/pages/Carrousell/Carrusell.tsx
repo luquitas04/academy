@@ -10,19 +10,19 @@ interface IProps {
 
 const estudiantes: IProps[] = [
     {
-        image: 'src/assets/img/face.jpg',
+        image: '/assets/img/face.jpg',
         title: 'Mi nombre es Jordan Alexander',
         studi: 'Estudiante de CSS',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel quam id dui consectetur consectetur.',
     },
     {
-        image: 'src/assets/img/images.jpeg',
+        image: '/assets/img/images.jpeg',
         title: 'Mi nombre es Sofia Martinez',
         studi: 'Estudiante de CSS',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel quam id dui consectetur consectetur.',
     },
     {
-        image: 'src/assets/img/juan.jpeg',
+        image:  '/assets/img/juan.jpeg',
         title: 'Mi nombre es Luis Alberto',
         studi: 'Estudiante de CSS',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel quam id dui consectetur consectetur.',
@@ -81,7 +81,7 @@ const Carrusell = () => {
     return (
         <section className={styles.container} id='blog'>
             <button onClick={handlePrev} className={styles.prev}>
-                <img src="src/assets/icons/leftarrow.svg" alt="" />
+                <img src="/assets/icons/leftarrow.svg" alt="" />
             </button>
             <div className={styles.carousel}>
                 <div
@@ -124,7 +124,7 @@ const Carrusell = () => {
                 </div>
             </div>
             <button onClick={handleNext} className={styles.next}>
-                <img src="src/assets/icons/rightarrow.svg" alt="" />
+                <img src="/assets/icons/rightarrow.svg" alt="" />
             </button>
         </section>
     );

@@ -10,7 +10,7 @@ const Curso = () => {
                 <Button text='Entre al curso' className={styles.btn} />
             </div>
             <div className={styles.figura}>
-                <img src="src/assets/img/macbook.png" />
+                <img src="/assets/img/macbook.png" />
             </div>
         </section>
     )
