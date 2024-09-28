@@ -9,17 +9,17 @@ interface LearningCard {
 
 const learningCards: LearningCard[] = [
     {
-        icon: 'src/assets/icons/shapes.svg',
+        icon: '/assets/icons/shapes.svg',
         title: 'CSS Layouts',
         text: 'Aprenderás cómo crear diseños responsivos con CSS utilizando Grid y Flexbox de manera eficiente.',
     },
     {
-        icon: 'src/assets/icons/paint.svg',
+        icon: '/assets/icons/paint.svg',
         title: 'Animaciones',
         text: 'Dominarás las animaciones con CSS, incluyendo transiciones, keyframes y efectos visuales llamativos.',
     },
     {
-        icon: 'src/assets/icons/code.svg',
+        icon: '/assets/icons/code.svg',
         title: 'Sass',
         text: 'Escribirás CSS de manera más organizada y escalable utilizando Sass.',
     },
