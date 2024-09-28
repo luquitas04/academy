@@ -1,0 +1,75 @@
+@use '../../variables.scss' as *;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: $dark;
+    padding: 20px;
+    margin: 100px 0;
+    font-size: 18px;
+
+    h3 {
+        font-weight: bold;
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+}
+
+.plan_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+    & > *:nth-child(3) {
+        grid-column: span 2;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 1024px) {
+    .plan_container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        margin: 80px 0;
+        padding: 15px;
+    }
+
+    .plan_container {
+        gap: 15px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    .plan_container > *:nth-child(3) {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin: 60px 0;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .plan_container {
+        gap: 10px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    .plan_container > *:nth-child(3) {
+        grid-column: span 1;
+    }
+}

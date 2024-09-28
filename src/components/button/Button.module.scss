@@ -1,0 +1,173 @@
+@use '../../variables.scss' as *;
+
+.button {
+    color:$dark;
+    padding: 10px 15px 10px 15px;
+    background-color: $blue;
+    width: 100px;
+    border-radius: 5px;
+    border: $blue;
+    font-weight: bolder;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button:disabled{
+    opacity: 30%;
+}
+.success {
+    background-color: $green-button;
+    border: $green-button;
+}
+.success:hover {
+    background-color: $green-button-hover;
+    border: $green-button-hover;
+}
+.neutralgray {
+    background-color: $gray;
+    border: $gray;
+}
+.error {
+    background-color: $rojo;
+    border: $rojo;
+}
+.error:hover {
+    background-color: $rojo-hover;
+    border: $rojo-hover;
+}
+.outline.success {
+    background-color: transparent;
+    color: $green-button;
+    border: 2px solid $green-button;
+}
+.outline.success:hover {
+    background-color: $green-button;
+    color: $white;
+    border: 2px solid $green-button;
+}
+.outline.error {
+    background-color: transparent;
+    color: $rojo;
+    border: 2px solid $rojo;
+}
+.outline.error:hover {
+    background-color: $rojo;
+    color: $white;
+    border: 2px solid $rojo;
+}
+.ghost.success {
+    border: none;
+    background-color: transparent;
+    color: $green-button;
+}
+.ghost.success:hover {
+    border: none;
+    background-color: transparent;
+    color: $green-button-hover;
+}
+.ghost.error {
+    border: none;
+    background-color: transparent;
+    color:$rojo
+}
+.ghost.error:hover {
+    border: none;
+    background-color: transparent;
+    color: $rojo
+}
+.ghost{
+    border:none;
+    background-color: transparent;
+    color: $blue
+}
+
+.ghost:hover{
+    border:none;
+    background-color: transparent;
+    color: $blue
+}
+
+.animatedButton {
+    display: flex;
+    font-weight: bolder;
+    text-align: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 14px;
+    color:$blue;
+    padding: 10px 15px;
+    background-color: $light;
+    border-radius: 5px;
+    border: $blue;
+    width: fit-content;
+    gap:10px;
+    .icon {
+        display: flex;
+        margin: 0;
+        padding: 0;
+        * {
+            margin: 0;
+            padding: 0;
+            height: 18px;
+            fill: $light;
+            width: auto;
+        }
+    }
+}
+.animatedSuccess {
+    background-color: $green-button;
+    color: $light;
+    .icon {
+        * {
+
+        }
+    }
+}
+.animatedError {
+    background-color: $rojo;
+    color: $light;
+    .icon {
+        * {
+            fill: $light;
+        }
+    }
+}
+
+.animatedLoading {
+    background-color: $gray;
+    color: $darkdisabled;
+    color: $light;
+    .icon {
+        * {
+            fill: $light;
+
+        }
+    }
+}
+.animatedMedium {
+    font-size: 16px;
+    .icon {
+        * {
+            height: 20px;
+        }
+    }
+}
+
+.animatedBig {
+    font-size: 18px;
+    .icon {
+        * {
+            height: 22px;
+        }
+    }
+}
+
+.animatedXxl {
+    font-size:20px;
+    .icon {
+        * {
+            height: 24px;
+        }
+    }
+}

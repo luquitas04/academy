@@ -1,0 +1,185 @@
+@use '../../variables.scss' as *;
+
+.overlay {
+    background: #1D293F;
+    padding: 40px 20px;
+    color: $white;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+
+    h3 {
+        font-size: 28px;
+    }
+}
+
+.container_links {
+    display: flex;
+    gap: 20px;
+    justify-content: start;
+}
+
+.register {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3 {
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+    div {
+        display: flex;
+        gap: 25px;
+    }
+
+    input {
+        width: 100%;
+        max-width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid $gray;
+        box-sizing: border-box;
+    }
+}
+
+.btn {
+    background: $blue-threegify;
+    width: auto;
+    padding: 25px;
+    height: 40px;
+    color: $white;
+    font-size: 16px;
+    border-radius: 15px;
+    box-sizing: border-box;
+    text-align: center;
+
+    &:hover {
+        transition: background 0.3s ease;
+        background: #0e89fc;
+        cursor: pointer;
+    }
+}
+
+.container_icons {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+    p {
+        margin: 0;
+    }
+
+    div {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+}
+
+.icon {
+    width: 30px;
+
+    &:hover {
+        transition: transform 0.3s ease;
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+}
+
+.navLink {
+    color: $white;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+        color: $blue-threegify;
+    }
+}
+
+@media (max-width: 1024px) {
+    .text,
+    .register {
+        width: 100%;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .text h3,
+    .register h3 {
+        font-size: 24px;
+    }
+
+    .btn {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .overlay {
+        padding: 20px 10px;
+    }
+
+    .register {
+        align-items: start;
+    }
+
+    .text h3,
+    .register h3 {
+        font-size: 20px;
+    }
+
+    .btn {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .icon {
+        width: 25px;
+    }
+}

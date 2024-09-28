@@ -1,0 +1,78 @@
+@use '../../../variables.scss' as *;
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $dark;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    background-color: $light;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    h3 {
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    img {
+        width: 60px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    &:active {
+        transform: perspective(1000px) rotateX(10deg) rotateY(-10deg) translateZ(-5px);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    &:hover {
+        transform: perspective(1000px) rotateX(-5deg) rotateY(5deg) translateZ(10px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    @media (max-width: 1024px) {
+        width: 250px;
+        font-size: 16px;
+
+        h3 {
+            font-size: 22px;
+        }
+
+        img {
+            width: 50px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        width: 200px;
+        padding: 15px;
+        font-size: 14px;
+
+        h3 {
+            font-size: 20px;
+        }
+
+        img {
+            width: 45px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        width: 150px;
+        padding: 10px;
+        font-size: 12px;
+
+        h3 {
+            font-size: 18px;
+        }
+
+        img {
+            width: 40px;
+        }
+    }
+}

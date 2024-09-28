@@ -1,0 +1,117 @@
+@use "../../variables.scss" as *;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent; 
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  height: 80px;
+  box-sizing: border-box;
+  font-family: $font_text;
+  transition: background-color 0.3s ease; 
+
+  &.scrolled {
+    background-color: $blue-threegify;
+  }
+
+  .logo {
+    img {
+      height: 70px;
+      width: auto;
+      transition: height 0.3s ease;
+    }
+  }
+
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+
+    .navLink {
+      color: $white;
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      cursor: pointer;
+      &:hover {
+        color: $blue-threegify;
+      }
+    }
+  }
+
+  .menuIcon {
+    display: none;
+    font-size: 2rem;
+    color: $white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+
+    &.active {
+      transform: rotate(180deg);
+    }
+
+    span {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      line-height: 1;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  .hamburgerIcon::before {
+    content: "\2630";
+  }
+
+  .closeIcon::before {
+    content: "\2715";
+  }
+
+  @media (max-width: 768px) {
+    .logo img {
+      height: 40px;
+    }
+
+    .menu {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      position: absolute;
+      top: 4rem;
+      left: 50%;
+      transform: translateX(-50%) translateY(-20%);
+      background-color: rgba(255, 255, 255, 0.255);
+      backdrop-filter: blur(5px);
+      padding: 2rem;
+      border-radius: 0.5rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: transform 0.5s ease, opacity 0.5s ease, visibility 0.5s ease;
+      transform-origin: top center;
+      width: 100%;
+      pointer-events: none;
+      z-index: 999;
+    }
+
+    .menu.active {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+      pointer-events: auto;
+    }
+
+    .menuIcon {
+      display: block;
+    }
+
+    .menuIcon.active span {
+      transform: rotate(180deg);
+    }
+  }
+}

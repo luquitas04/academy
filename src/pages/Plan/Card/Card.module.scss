@@ -1,0 +1,50 @@
+@use '../../../variables.scss' as *;
+
+.container {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    color: $dark;
+    background: #e5e5f7;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 15px;
+    align-items: center;
+    text-align: center;
+
+    span {
+        color: $darkdisabled;
+        font-size: 15px;
+    }
+
+    h3 {
+        font-weight: bold;
+        margin: 0;
+    }
+
+    div span {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: $darkdisabled;
+        font-size: 15px;
+    }
+
+}
+
+.btn {
+    width: 100%;
+    padding: 20px;
+    font-size: 15px;
+    border-radius: 15px;
+    font-weight: bold;
+    background: $white;
+    color: #5454d4;
+    transition: background 0.7s ease, color 0.7s ease;
+
+    &:hover {
+        transition: background 0.7s ease, color 0.7s ease;
+        background: #5454d4;
+        color: $white;
+        cursor: pointer;
+    }
+}
